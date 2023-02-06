@@ -58,6 +58,7 @@ class LntxbotWallet(Wallet):
         memo: Optional[str] = None,
         description_hash: Optional[bytes] = None,
         unhashed_description: Optional[bytes] = None,
+        expiry: Optional[int] = None,
     ) -> InvoiceResponse:
         data: Dict = {"amt": str(amount)}
         if description_hash:
