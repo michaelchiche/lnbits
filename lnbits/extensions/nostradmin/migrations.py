@@ -1,6 +1,3 @@
-from lnbits.db import Database
-
-
 async def m001_initial(db):
     """
     Initial nostradmin table.
