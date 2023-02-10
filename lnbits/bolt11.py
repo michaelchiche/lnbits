@@ -275,7 +275,7 @@ class LnAddr:
         self.amount = amount
 
     def __str__(self):
-        assert self.pubkey
+        assert self.pubkey, "Public Key missing"
         pubkey = bytes.hex(self.pubkey.serialize())
         tags = ", ".join([k + "=" + str(v) for k, v in self.tags])
         return f"LnAddr[{pubkey}, amount={self.amount}{self.currency} tags=[{tags}]]"
